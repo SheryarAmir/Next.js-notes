@@ -1,5 +1,5 @@
 
-import { getAllTodos} from "../../api";
+import { getAllTodos} from "@/api";
 import AddTask from "./components/AddTask"
 import TodoList from "./components/TodoList"
 

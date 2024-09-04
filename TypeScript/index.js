@@ -15,3 +15,4 @@ if (sen === sen1) {
 else {
     console.log("different");
 }
+let isdone = true;
