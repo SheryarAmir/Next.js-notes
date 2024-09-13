@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import db from "@/db/db";
 import { formatCurrency, formatNumber } from "@/lib/formatters";
+import { resolve } from "path";
 
 // Function to get sales data
 async function getSalesData() {
@@ -9,11 +10,17 @@ async function getSalesData() {
     _count: true,
   });
 
+  await wait (2000)
+
   return {
     amount: (data._sum.pricePaidInCents || 0) / 100,
     numberOfSales: data._count || 0, // Provide a fallback if count is undefined
   };
 }
+
+ function wait(duration:number){
+return new Promise(resolve=>setTimeout(resolve,duration ))
+ }
 
 // Function to get user data
 async function getUserData() {
