@@ -1,3 +1,11 @@
-export default function Blog(){
-    return <h1> my blog</h1>
+import React from 'react'
+
+const page = () => {
+  return (
+    <div>
+      <h1>the blog page </h1>
+    </div>
+  )
 }
+
+export default page
