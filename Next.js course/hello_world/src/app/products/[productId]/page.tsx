@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next/types';  // Import Metadata type correctly
-import { resolve } from 'path';
+
 
 type Props = {
   params: {

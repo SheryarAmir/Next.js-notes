@@ -1,11 +1,18 @@
-import React from 'react'
+import Link from 'next/link';
+import React from 'react';
 
-const page = () => {
+const Page = () => {
   return (
     <div>
-      <h2 className='text-white'>this is thie home page in the app folder</h2>
+      <h2 className='text-white'>This is the home page in the app folder</h2>
+      <Link href='/blog'>
+        Blog
+      </Link>
+      <Link href='/products'>
+        Product
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
