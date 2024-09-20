@@ -10,7 +10,7 @@ export default function Home() {
 <section className="container px-4 py-10 mx-auto lg:h-128 lg:space-x-8 lg:flex lg:items-center">
       <div className="w-full text-center lg:text-left lg:w-1/2 lg:-mt-8">
         <h1 className="text-3xl leading-snug text-gray-800 dark:text-gray-200 md:text-4xl">
-          A <span className="font-semibold">free repository</span> for community <br className="hidden lg:block" /> components using <span className="font-semibold underline decoration-primary">[Tailwind CSS](https://tailwindcss.com/)
+          A <span className="font-semibold">free repository</span> for community <br className="hidden lg:block" /> components using <span className="font-semibold underline decoration-primary">Tailwind CSS
 </span>
         </h1>
         <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
@@ -19,8 +19,8 @@ export default function Home() {
         <div className="mt-6 bg-transparent border rounded-lg dark:border-gray-700 lg:w-2/3 focus-within:border-primary focus-within:ring focus-within:ring-primary dark:focus-within:border-primary focus-within:ring-opacity-20">
           <form action="https://www.creative-tim.com/twcomponents/search" className="flex flex-wrap justify-between md:flex-row">
             <input type="search" name="query" placeholder="Search Components" required className="flex-1 h-10 px-4 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none lg:h-12 dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0" />
-            <button type="submit" className="flex items-center justify-center w-full p-2 m-1 text-white transition-colors duration-300 transform rounded-lg lg:w-12 lg:h-12 lg:p-0 bg-primary hover:bg-primary/70 focus:outline-none focus:bg-primary/70">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+            <button type="submit" className="flex items-center bg-violet-500 justify-center w-full p-2 m-1 text-white transition-colors duration-300 transform rounded-lg lg:w-12 lg:h-12 lg:p-0 bg-primary hover:bg-primary/70 focus:outline-none focus:bg-primary/70">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 ">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
@@ -153,6 +153,125 @@ export default function Home() {
 
 
 
+    <section className=" py-12">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">Customer Reviews</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="flex items-center mb-4">
+              <img
+                className="w-12 h-12 rounded-full mr-4"
+                src="https://images.pexels.com/photos/2169427/pexels-photo-2169427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Reviewer"
+              />
+              <div>
+                <h3 className="text-xl font-semibold">John Doe</h3>
+                <p className="text-gray-600">Software Engineer</p>
+              </div>
+            </div>
+            <p className="text-gray-700">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+            </p>
+            <div className="mt-4">
+              <span className="text-yellow-500">★★★★★</span>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="flex items-center mb-4">
+              <img
+                className="w-12 h-12 rounded-full mr-4"
+                src="https://images.pexels.com/photos/2052858/pexels-photo-2052858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Reviewer"
+              />
+              <div>
+                <h3 className="text-xl font-semibold">Jane Smith</h3>
+                <p className="text-gray-600">Product Manager</p>
+              </div>
+            </div>
+            <p className="text-gray-700">
+              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            </p>
+            <div className="mt-4">
+              <span className="text-yellow-500">★★★★☆</span>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="flex items-center mb-4">
+              <img
+                className="w-12 h-12 rounded-full mr-4"
+                src="https://images.pexels.com/photos/9955205/pexels-photo-9955205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Reviewer"
+              />
+              <div>
+                <h3 className="text-xl font-semibold">Alice Johnson</h3>
+                <p className="text-gray-600">Designer</p>
+              </div>
+            </div>
+            <p className="text-gray-700">
+              "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            </p>
+            <div className="mt-4">
+              <span className="text-yellow-500">★★★★★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+
+<section className="py-8">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <p className="text-gray-700 mb-4">"Great service and friendly staff!"</p>
+        <div className="flex items-center">
+          <img
+            className="w-12 h-12 rounded-full mr-4"
+            src="https://via.placeholder.com/150"
+            alt="Customer"
+          />
+          <div>
+            <p className="text-gray-900 font-bold">John Doe</p>
+            <p className="text-gray-600">CEO, Company</p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <p className="text-gray-700 mb-4">"Highly recommend their services!"</p>
+        <div className="flex items-center">
+          <img
+            className="w-12 h-12 rounded-full mr-4"
+            src="https://via.placeholder.com/150"
+            alt="Customer"
+          />
+          <div>
+            <p className="text-gray-900 font-bold">Jane Smith</p>
+            <p className="text-gray-600">Manager, Business</p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <p className="text-gray-700 mb-4">"Exceptional quality and support!"</p>
+        <div className="flex items-center">
+          <img
+            className="w-12 h-12 rounded-full mr-4"
+            src="https://via.placeholder.com/150"
+            alt="Customer"
+          />
+          <div>
+            <p className="text-gray-900 font-bold">Alice Johnson</p>
+            <p className="text-gray-600">Director, Organization</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
     <footer className="bg-gray-800 text-gray-200 py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
@@ -208,6 +327,7 @@ export default function Home() {
       </div>
     </footer>
 
+  
    
   </main>
     </>
@@ -221,3 +341,4 @@ import Image from 'next/image';
 
 
 
+   
