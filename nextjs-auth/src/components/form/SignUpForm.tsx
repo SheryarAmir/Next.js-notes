@@ -16,6 +16,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast"
 
 const formSchema = z.object({
   Username: z.string().min(1, "Username is required").max(30),
@@ -32,6 +33,7 @@ const formSchema = z.object({
 
 
 const SignUpForm = () => {
+  const { toast } = useToast()
   const router =useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -61,7 +63,11 @@ if(responce.ok){
 router.push('/sign-in')
 }
 else{
-  console.error('Registration failed')
+  toast({
+    title: "Error",
+    description: "Oops! Something when Wrong",
+    variant:"destructive"
+  })
 }
   };
 

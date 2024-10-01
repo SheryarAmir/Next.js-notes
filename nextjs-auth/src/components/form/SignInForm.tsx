@@ -18,6 +18,8 @@ import {
 import {signIn} from "next-auth/react";
 import { redirect } from "next/dist/server/api-utils";
 import { useRouter } from "next/navigation";
+import { useToast } from "@/hooks/use-toast"
+
 
 
 
@@ -27,6 +29,7 @@ const formSchema = z.object({
 });
 
 const SignInForm = () => {
+  const { toast } = useToast()
   const router=useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -44,8 +47,13 @@ const SignInForm = () => {
    })
    
    if(signInData?.error){
-    console.log(signInData.error)
+    toast({
+      title: "Error",
+      description: "Oops! Something when Wrong",
+      variant:"destructive"
+    })
    }else{
+    router.refresh();
     router.push('/admin')
    }
   };
