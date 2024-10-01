@@ -15,6 +15,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {signIn} from "next-auth/react";
+import { redirect } from "next/dist/server/api-utils";
+import { useRouter } from "next/navigation";
+
+
 
 const formSchema = z.object({
   Email: z.string().email("Invalid email address"),
@@ -22,6 +27,7 @@ const formSchema = z.object({
 });
 
 const SignInForm = () => {
+  const router=useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -30,8 +36,18 @@ const SignInForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = async(values: z.infer<typeof formSchema>) => {
+   const signInData=await signIn('credentials' ,{
+    email:values.Email,
+    password:values.Password,
+    redirect:false
+   })
+   
+   if(signInData?.error){
+    console.log(signInData.error)
+   }else{
+    router.push('/admin')
+   }
   };
 
   return (
